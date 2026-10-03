@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-AQUIS // Holographic AI Core</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
+</head>
+<body>
+  <div class="hud-overlay">
+    <header class="hud-header">
+      <div class="logo">G-AQUIS <span>v2.0</span></div>
+      <div class="status-pill"><span class="pulse"></span> ONLINE</div>
+    </header>
+
+    <main class="hud-main">
+      <section class="hud-panel left">
+        <h3>SYSTEM TELEMETRY</h3>
+        <div class="metric">
+          <label>QUANTUM QUBITS</label>
+          <span id="qubit-count">128 Active</span>
+        </div>
+        <div class="metric">
+          <label>GEMINI INFERENCE</label>
+          <span id="inference-time">4.2 ms</span>
+        </div>
+        <div class="metric">
+          <label>MYSQL SYNC</label>
+          <span id="db-status">CONNECTED</span>
+        </div>
+      </section>
+
+      <section class="hud-panel right">
+        <h3>CONTROLS</h3>
+        <button id="btn-pulse" onclick="triggerQuantumPulse()">QUANTUM PULSE</button>
+        <button id="btn-mode" onclick="toggleHUDTheme()">TOGGLE THEME</button>
+        <div class="terminal" id="terminal-log">
+          [SYS] Initializing Quantum Core...<br>
+          [GEMINI] Neural Engine Ready.<br>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="canvas-container"></div>
+  <script src="app.js"></script>
+</body>
+</html>
