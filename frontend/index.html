@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-AQUIS // Gemini Quantum Holographic HUD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="hologram-canvas"></div>
+
+    <div class="hud-overlay">
+        <header class="hud-header">
+            <div class="hud-title">G-AQUIS <span class="sub">v2.5-QUANTUM</span></div>
+            <div class="hud-status"><span class="pulse"></span> ONLINE</div>
+        </header>
+
+        <main class="hud-content">
+            <div class="hud-panel left">
+                <h3>SYSTEM METRICS</h3>
+                <div class="metric"><label>Quantum Fidelity:</label> <span>99.84%</span></div>
+                <div class="metric"><label>Qubits Active:</label> <span>128</span></div>
+                <div class="metric"><label>AI Latency:</label> <span id="latency-val">4.2 ms</span></div>
+                <div class="metric"><label>Backend Node:</label> <span>Java Spring (Active)</span></div>
+            </div>
+
+            <div class="hud-panel right">
+                <h3>AI COMMAND INPUT</h3>
+                <div class="terminal" id="terminal-out">
+                    [SYSTEM READY] Listening for Gemini Quantum Directives...
+                </div>
+                <div class="input-box">
+                    <input type="text" id="command-input" placeholder="Enter voice command or query..." />
+                    <button id="send-btn">EXECUTE</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
